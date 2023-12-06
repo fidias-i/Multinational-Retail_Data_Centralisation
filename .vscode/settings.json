@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "data-handling-project-readonly.cq2e8zno855e.eu-west-1.rds.amazonaws.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "database": "postgres",
+            "username": "aicore_admin",
+            "password": "AiCore2022",
+            "name": "data_handling_project"
+        }
+    ]
+}
