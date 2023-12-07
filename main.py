@@ -21,7 +21,8 @@ pdf_path = 'https://data-handling-public.s3.eu-west-1.amazonaws.com/card_details
 pdf_df = extractor_cls.retrieve_pdf_data(pdf_path)
 cleaned_pdf_df = datacleaning_cls.clean_card_data(pdf_df)
 print(cleaned_pdf_df)
-extractor_cls.upload_to_db(cleaned_pdf_df,'dim_card_details')
+db_connn_cls.upload_to_db(cleaned_pdf_df,'dim_card_details')
+
 
 
 # Task 5: Extract API data
@@ -34,7 +35,7 @@ products = extractor_cls.extract_from_s3('s3://data-handling-public/products.csv
 products.columns
 products = datacleaning_cls.convert_product_weights(products)
 products = datacleaning_cls.clean_products_data(products)
-extractor_cls.upload_to_db(products,'sales_data')
+db_connn_cls.upload_to_db(products,'sales_data')
 
 
 #Task 7: orders_table
@@ -45,7 +46,7 @@ db_connn_cls.upload_to_db(cleaned_orders_df,'orders_table')
 #Task 8 : Date events - JSON data
 json_df = extractor_cls.extract_json_from_s3()
 json_df.columns
-json_df_clean['time_period'].unique()
+# json_df_clean['time_period'].unique()
 json_df_clean = datacleaning_cls.clean_json_data(json_df)
 db_connn_cls.upload_to_db(json_df_clean,'dim_date_times')
 

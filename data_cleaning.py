@@ -47,11 +47,11 @@ class DataCleaning():
         return df
         
     def clean_orders_data(self,df):
-        df = df[['level_0', 'index', 'date_uuid', 'first_name', 'last_name', 'user_uuid',
+        df = df[['index', 'date_uuid', 'first_name', 'last_name', 'user_uuid',
         'card_number', 'store_code', 'product_code', 'product_quantity']]
         # df = self.extractor.read_rds_table('orders_table')
-        print('Columns: \n')
-        print(df.columns)
+        # print('Columns: \n')
+        # print(df.columns)
         return df
 
     def clean_pdf_data(self,pdf_df_list):

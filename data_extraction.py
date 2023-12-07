@@ -63,10 +63,11 @@ class DataExtractor(DatabaseConnector):
 #     df = pd.DataFrame(store_list)
 #         return df
 
-    #task 6
+    #task 6  
     def extract_from_s3(self,address):
-        aws_access_key_id = 'AKIAZQ6MZRWPEZ2Q3VS4'
-        aws_secret_access_key = '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'
+        keys_df = pd.read_csv('Fidias_accessKeys.csv')
+        aws_access_key_id = keys_df['Access key ID'][0]
+        aws_secret_access_key = keys_df['Secret access key'][0]
         region_name = 'us-east-1'
 
         address_without_s3 = address.replace('s3://','')
