@@ -9,6 +9,16 @@
             "username": "aicore_admin",
             "password": "AiCore2022",
             "name": "data_handling_project"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "sales_data",
+            "database": "sales_data",
+            "username": "postgres",
+            "password": "1234"
         }
     ]
 }

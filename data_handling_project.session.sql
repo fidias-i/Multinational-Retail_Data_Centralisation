@@ -1,3 +1,3 @@
 SELECT *
-FROM legacy_users  
+FROM o  
 LIMIT 5;
